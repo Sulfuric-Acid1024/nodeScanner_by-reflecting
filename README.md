@@ -46,3 +46,16 @@ Two different programs need to be ran on device A and C at the same time.
     ...
     ```
 4. Wait for the program to print out all the data you want, then press `Ctrl+C` so that the program stops.
+
+## How It works
+Just like what we said in Introduction, most scanners scan in this way:
+
+![Untitled Diagram](https://user-images.githubusercontent.com/88928074/167243576-cf55cd7d-d5d3-43a9-94cd-e08b75b56b19.png)
+
+Things are not always so lucky, though. Sometimes the reply packet might be blocked by a firewall:
+
+![Untitled Diagram2](https://user-images.githubusercontent.com/88928074/167243621-c2b8129c-04de-43df-b54e-baff8e9b1c00.png)
+
+Then we use a fake source IP and reflect the packet to another device, so the firewall can't block the response:
+
+![Untitled Diagram3](https://user-images.githubusercontent.com/88928074/167243689-fcd0d325-eb24-4996-849c-9b1a3806463c.png)
